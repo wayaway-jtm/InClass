@@ -1,3 +1,10 @@
+
+/* dark color scheme */
+.dark {
+    background-color: #000;
+    color: blanchedalmond;
+}
+
 p {
     color: brown;
 }
