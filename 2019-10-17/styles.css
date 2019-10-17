@@ -1,5 +1,6 @@
 body {
     height: 200vh;
+    padding: 50px 0;
 }
 
 #header {
@@ -15,7 +16,6 @@ body {
 
 #div1 {
     position: relative;
-    top: 50px;
     width: 348px;
     height: 270px;
     border: 1px solid #000;
