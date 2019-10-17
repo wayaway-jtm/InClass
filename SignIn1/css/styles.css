@@ -9,12 +9,15 @@ main {
     color: #AAAAAA;
     font-family: sans-serif;
     font-size: 1rem;
+    min-height: 100vh;
 }
 
 h1 {
     color: #7E7E7E;
     font-size: 1rem;
     margin: auto;
+    flex: 1;
+    padding: 20px;
 }
 
 form {
@@ -24,12 +27,14 @@ form {
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .txt-input {
-    margin: auto;
+    margin: 20px auto;
     padding: 0.5em;
     display: block;
+    flex: 1;
 }
 
 button {
@@ -39,6 +44,7 @@ button {
     color: white;
     padding: 0.5em;
     margin: auto;
+    flex: 1;
 }
 
 label {
@@ -47,5 +53,7 @@ label {
 }
 
 #div-remember {
+    align-items: center;
     margin: auto;
+    flex: 1;
 }
