@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+main {
+    background-color: #D47677;
+    justify-content: center;
+    padding: 5em;
+    color: #AAAAAA;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    color: #7E7E7E;
+    font-size: 1rem;
+    margin: auto;
+}
+
+form {
+    background-color: #F0F0F0;
+    padding: 0.5em;
+    width: 545px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.txt-input {
+    margin: auto;
+    padding: 0.5em;
+    display: block;
+}
+
+button {
+    display: block;
+    background-color: #9DD8D4;
+    border: 0px;
+    color: white;
+    padding: 0.5em;
+    margin: auto;
+}
+
+label {
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+#div-remember {
+    margin: auto;
+}
