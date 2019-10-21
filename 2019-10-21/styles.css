@@ -6,7 +6,12 @@ nav {
     background-color: #551a8b;
     color: rgba(255, 255, 255, 0.8);
     width: 98vw;
-    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 10px;
 }
 
@@ -14,22 +19,31 @@ body {
     margin: 0;
 }
 
-nav>h1 {
+nav h1 {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
     display: inline-block;
-    /* margin-left: 15px; */
     font-size: 0.8rem;
     font-weight: normal;
 }
 
-nav>div {
-    float: right;
-    height: 40px;
+nav div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: center;
+    align-content: center;
 }
 
-div>a {
-    display: inline-block;
+div a {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.8rem;
     text-decoration: none;
-    vertical-align: middle;
+
 }
