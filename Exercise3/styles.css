@@ -1,0 +1,102 @@
+/* Goofy borders around everything to help us see the layout. */
+* {
+    border: 2px solid cornflowerblue;
+    margin: 5px;
+    padding: 3px;
+}
+
+/* body takes up full viewport and extends all the way to the edges. */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+h1 {
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+}
+
+a {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 1;
+    text-align: center;
+}
+
+main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex: 1;
+}
+
+article {
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+}
+
+section {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+img {
+    height: 250px;
+}
+
+img:hover {
+    -webkit-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
+
+@keyframes rotate {
+    from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
