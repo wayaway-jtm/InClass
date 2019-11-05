@@ -8,7 +8,7 @@ const desiredTemp = 75;
 if (actualTemp !== desiredTemp) {
     if (actualTemp > desiredTemp) {
         console.log("Run A/C");
-    } else (actualTemp < desiredTemp) {
+    } else {
         console.log("Run heat");
     }
 } else {
@@ -25,15 +25,16 @@ if (actualTemp !== desiredTemp) {
 let tempCelsius = 14;
 let targetUnit = "K";
 
+let newTemp = tempCelsius;
+
 switch (targetUnit) {
     case 'K':
         // Convert to Kelvin
+        newTemp += 273;
         break;
     case 'F':
         // Convert to Fahrenheit
-        break;
-    case 'C':
-        // Do nothing
+        newTemp = (newTemp * (9/5)) + 32;
         break;
 }
 
