@@ -5,15 +5,15 @@
 let actualTemp = 72;
 const desiredTemp = 75;
 
-if (actualTemp !== desiredTemp) {
-    if (actualTemp > desiredTemp) {
-        console.log("Run A/C");
-    } else {
-        console.log("Run heat");
-    }
-} else {
-    console.log("Standby");
-}
+// if (actualTemp !== desiredTemp) {
+//     if (actualTemp > desiredTemp) {
+//         console.log("Run A/C");
+//     } else {
+//         console.log("Run heat");
+//     }
+// } else {
+//     console.log("Standby");
+// }
 
 // Extended Challenges second exercise:
 // Start with two variables:
@@ -41,7 +41,18 @@ switch (targetUnit) {
 // Write a while loop that will
 // adjust the temperature by one
 // until it reaches the desired temperature
+actualTemp = 15000000;
+desiredTemp = 75;
 
+console.log(`Starting temp: ${actualTemp}   Desired temp: ${desiredTemp}`);
+while (actualTemp !== desiredTemp) {
+    if (actualTemp < desiredTemp) {
+        actualTemp++;
+    } else {
+        actualTemp--;
+    }
+    console.log(actualTemp);
+}
 
 
 
@@ -49,3 +60,16 @@ switch (targetUnit) {
 // (1) Increase by 2
 // (2) Decrease by 1
 // until it reaches the desired temperature
+
+actualTemp = 72;
+desiredTemp = 75;
+
+console.log(`Starting temp: ${actualTemp}   Desired temp: ${desiredTemp}`);
+while (actualTemp !== desiredTemp) {
+    if (actualTemp < desiredTemp) {
+        actualTemp += 2;
+    } else {
+        actualTemp--;
+    }
+    console.log(actualTemp);
+}
