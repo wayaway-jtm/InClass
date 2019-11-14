@@ -6,6 +6,7 @@
 "use strict" 
 {
     // Declaring variables
+    const DIRECTIONS = [ 'N', 'E', 'S', 'W'];
     let isFacingForward = true;
     let location = 0;
 
