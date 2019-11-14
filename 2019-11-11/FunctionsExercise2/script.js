@@ -90,7 +90,7 @@
      * Changes facing direction 90 degrees counter-clockwise
      */
     function turnLeft() {
-        dirIndex = DIRECTIONS.indexOf(facingDirection);
+        let dirIndex = DIRECTIONS.indexOf(facingDirection);
         if (dirIndex > 0) {
             facingDirection = DIRECTIONS[DIRECTIONS.indexOf(facingDirection) - 1];
         } else {
@@ -102,7 +102,7 @@
      * Changes facing direction 90 degrees clockwise
      */
     function turnRight() {
-        dirIndex = DIRECTIONS.indexOf(facingDirection);
+        let dirIndex = DIRECTIONS.indexOf(facingDirection);
         if (dirIndex < 3) {
             facingDirection = DIRECTIONS[DIRECTIONS.indexOf(facingDirection) + 1];
         } else {
@@ -114,6 +114,11 @@
      * Logs the user's current location to the console
      */
     function printLocation() {
-        console.log(`Current location: ${location}`);
+        let xDir = "";
+        let yDir = "";
+
+        location[0] >= 0 ? xDir = 'N' : xDir = 'S';
+        location[1] >= 0 ? yDir = 'E' : yDir = 'W';
+        console.log(`Current location: ${Math.abs(location[0])} ${xDir}, ${Math.abs(location[1])} ${yDir}`);
     }
 }
