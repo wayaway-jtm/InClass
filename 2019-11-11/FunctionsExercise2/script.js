@@ -3,12 +3,11 @@
     Functions Exercise 2
 */
 
-"use strict" 
-{
+"use strict"; {
     // Declaring variables
-    const DIRECTIONS = [ 'N', 'E', 'S', 'W'];
-    let isFacingForward = true;
-    let location = 0;
+    const DIRECTIONS = ['N', 'E', 'S', 'W'];
+    let facingDirection = DIRECTIONS[0];
+    let location = [0, 0];
 
     // Main program
     moveForward(5);
@@ -29,10 +28,19 @@
      * @param {Number} num Distance (in integer) to move in the current facing direction
      */
     function moveForward(num) {
-        if (isFacingForward) {
-            location += num;
-        } else {
-            location -= num;
+        switch (facingDirection) {
+            case DIRECTIONS[0]:
+                location[0] += num;
+                break;
+            case DIRECTIONS[1]:
+                location[1] += num;
+                break;
+            case DIRECTIONS[2]:
+                location[0] -= num;
+                break;
+            case DIRECTIONS[3]:
+                location[1] -= num;
+                break;
         }
     }
 
@@ -42,10 +50,19 @@
      * @param {Number} num Distance (in integer) to move opposite of the current facing direction
      */
     function moveBackward(num) {
-        if (isFacingForward) {
-            location -= num;
-        } else {
-            location += num;
+        switch (facingDirection) {
+            case DIRECTIONS[0]:
+                location[0] -= num;
+                break;
+            case DIRECTIONS[1]:
+                location[1] -= num;
+                break;
+            case DIRECTIONS[2]:
+                location[0] += num;
+                break;
+            case DIRECTIONS[3]:
+                location[1] += num;
+                break;
         }
     }
 
@@ -53,16 +70,44 @@
      * Reverses the direction the user is currently facing
      */
     function turnAround() {
-        isFacingForward = !isFacingForward;
+        switch (facingDirection) {
+            case DIRECTIONS[0]:
+                facingDirection = DIRECTIONS[2];
+                break;
+            case DIRECTIONS[1]:
+                facingDirection = DIRECTIONS[3];
+                break;
+            case DIRECTIONS[2]:
+                facingDirection = DIRECTIONS[0];
+                break;
+            case DIRECTIONS[3]:
+                facingDirection = DIRECTIONS[1];
+                break;
+        }
     }
 
-    
+    /**
+     * Changes facing direction 90 degrees counter-clockwise
+     */
     function turnLeft() {
-
+        dirIndex = DIRECTIONS.indexOf(facingDirection);
+        if (dirIndex > 0) {
+            facingDirection = DIRECTIONS[DIRECTIONS.indexOf(facingDirection) - 1];
+        } else {
+            facingDirection = DIRECTIONS[3];
+        }
     }
 
+    /**
+     * Changes facing direction 90 degrees clockwise
+     */
     function turnRight() {
-
+        dirIndex = DIRECTIONS.indexOf(facingDirection);
+        if (dirIndex < 3) {
+            facingDirection = DIRECTIONS[DIRECTIONS.indexOf(facingDirection) + 1];
+        } else {
+            facingDirection = DIRECTIONS[0];
+        }
     }
 
     /**
